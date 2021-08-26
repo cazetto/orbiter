@@ -6,5 +6,5 @@ module.exports = {
     '^.+\\.[tj]sx?$': 'babel-jest',
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/packages/rocketchat-desktop-frontend',
+  coverageDirectory: '../../coverage/apps/rocketchat-desktop-frontend',
 };

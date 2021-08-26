@@ -69,22 +69,22 @@
       }
     },
     "rocketchat-desktop-frontend": {
-      "root": "packages/rocketchat-desktop-frontend",
-      "sourceRoot": "packages/rocketchat-desktop-frontend/src",
+      "root": "apps/rocketchat-desktop-frontend",
+      "sourceRoot": "apps/rocketchat-desktop-frontend/src",
       "projectType": "application",
       "targets": {
         "build": {
           "executor": "@nrwl/web:build",
           "outputs": ["{options.outputPath}"],
           "options": {
-            "outputPath": "dist/packages/rocketchat-desktop-frontend",
-            "index": "packages/rocketchat-desktop-frontend/src/index.html",
-            "main": "packages/rocketchat-desktop-frontend/src/main.tsx",
-            "polyfills": "packages/rocketchat-desktop-frontend/src/polyfills.ts",
-            "tsConfig": "packages/rocketchat-desktop-frontend/tsconfig.app.json",
+            "outputPath": "dist/apps/rocketchat-desktop-frontend",
+            "index": "apps/rocketchat-desktop-frontend/src/index.html",
+            "main": "apps/rocketchat-desktop-frontend/src/main.tsx",
+            "polyfills": "apps/rocketchat-desktop-frontend/src/polyfills.ts",
+            "tsConfig": "apps/rocketchat-desktop-frontend/tsconfig.app.json",
             "assets": [
-              "packages/rocketchat-desktop-frontend/src/favicon.ico",
-              "packages/rocketchat-desktop-frontend/src/assets"
+              "apps/rocketchat-desktop-frontend/src/favicon.ico",
+              "apps/rocketchat-desktop-frontend/src/assets"
             ],
             "styles": [],
             "scripts": [],
@@ -94,8 +94,8 @@
             "production": {
               "fileReplacements": [
                 {
-                  "replace": "packages/rocketchat-desktop-frontend/src/environments/environment.ts",
-                  "with": "packages/rocketchat-desktop-frontend/src/environments/environment.prod.ts"
+                  "replace": "apps/rocketchat-desktop-frontend/src/environments/environment.ts",
+                  "with": "apps/rocketchat-desktop-frontend/src/environments/environment.prod.ts"
                 }
               ],
               "optimization": true,
@@ -132,31 +132,31 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "packages/rocketchat-desktop-frontend/**/*.{ts,tsx,js,jsx}"
+              "apps/rocketchat-desktop-frontend/**/*.{ts,tsx,js,jsx}"
             ]
           }
         },
         "test": {
           "executor": "@nrwl/jest:jest",
-          "outputs": ["coverage/packages/rocketchat-desktop-frontend"],
+          "outputs": ["coverage/apps/rocketchat-desktop-frontend"],
           "options": {
-            "jestConfig": "packages/rocketchat-desktop-frontend/jest.config.js",
+            "jestConfig": "apps/rocketchat-desktop-frontend/jest.config.js",
             "passWithNoTests": true
           }
         }
       }
     },
     "rocketchat-desktop-frontend-e2e": {
-      "root": "packages/rocketchat-desktop-frontend-e2e",
-      "sourceRoot": "packages/rocketchat-desktop-frontend-e2e/src",
+      "root": "apps/rocketchat-desktop-frontend-e2e",
+      "sourceRoot": "apps/rocketchat-desktop-frontend-e2e/src",
       "projectType": "application",
       "targets": {
         "e2e": {
           "executor": "@nrwl/cypress:cypress",
           "options": {
-            "cypressConfig": "packages/rocketchat-desktop-frontend-e2e/cypress.json",
+            "cypressConfig": "apps/rocketchat-desktop-frontend-e2e/cypress.json",
             "devServerTarget": "rocketchat-desktop-frontend:serve",
-            "tsConfig": "packages/rocketchat-desktop-frontend-e2e/tsconfig.json"
+            "tsConfig": "apps/rocketchat-desktop-frontend-e2e/tsconfig.json"
           },
           "configurations": {
             "production": {
@@ -168,7 +168,7 @@
           "executor": "@nrwl/linter:eslint",
           "options": {
             "lintFilePatterns": [
-              "packages/rocketchat-desktop-frontend-e2e/**/*.{js,ts}"
+              "apps/rocketchat-desktop-frontend-e2e/**/*.{js,ts}"
             ]
           }
         }
