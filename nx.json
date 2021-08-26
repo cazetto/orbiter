@@ -1,7 +1,9 @@
 {
   "extends": "@nrwl/workspace/presets/npm.json",
   "npmScope": "orbiter",
-  "affected": { "defaultBase": "master" },
+  "affected": {
+    "defaultBase": "master"
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -11,5 +13,16 @@
       }
     }
   },
-  "projects": { "rocketchat-desktop-electron": { "tags": [] } }
+  "projects": {
+    "rocketchat-desktop-electron": {
+      "tags": []
+    },
+    "rocketchat-desktop-frontend": {
+      "tags": []
+    },
+    "rocketchat-desktop-frontend-e2e": {
+      "tags": [],
+      "implicitDependencies": ["rocketchat-desktop-frontend"]
+    }
+  }
 }
