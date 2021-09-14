@@ -9,7 +9,8 @@
     "_package": "nx run rocketchat-desktop-electron:package",
     "make": "npm run build && npm run _make",
     "_make": "nx run rocketchat-desktop-electron:make",
-    "postinstall": "exitzero electron-builder install-app-deps"
+    "postinstall": "exitzero electron-builder install-app-deps",
+    "start": "nx run-many --target=serve --projects=rocketchat-desktop-frontend,rocketchat-desktop-electron --parallel"
   },
   "private": true,
   "dependencies": {
