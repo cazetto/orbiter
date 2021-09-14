@@ -67,6 +67,7 @@ export default class App {
       height: height,
       show: false,
       webPreferences: {
+        webviewTag: true,
         contextIsolation: true,
         backgroundThrottling: false,
         preload: join(__dirname, 'preload.js'),
