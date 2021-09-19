@@ -2,7 +2,8 @@
   "name": "root",
   "private": true,
   "scripts": {
-    "start": "lerna run start --scope @orbiter/rocketchat-desktop"
+    "start": "lerna run start --scope @orbiter/rocketchat-desktop",
+    "start:components": "lerna run start --scope @orbiter/components"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
