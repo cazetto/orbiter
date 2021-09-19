@@ -3,10 +3,17 @@
   "private": true,
   "scripts": {
     "start": "lerna run start --scope @orbiter/rocketchat-desktop",
+    "start:frontend": "lerna run start --scope @orbiter/rocketchat-desktop-frontend",
     "start:components": "lerna run start --scope @orbiter/components"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
   },
-  "workspaces": ["apps/*", "libs/*"]
+  "workspaces": [
+    "apps/*",
+    "libs/*"
+  ],
+  "dependencies": {
+    "eslint-config-react-app": "^6.0.0"
+  }
 }
