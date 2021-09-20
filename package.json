@@ -2,9 +2,16 @@
   "name": "root",
   "private": true,
   "scripts": {
+    "bootstrap": "yarn && lerna bootstrap",
     "start": "lerna run start --scope @orbiter/rocketchat-desktop",
+    
     "start:frontend": "lerna run start --scope @orbiter/rocketchat-desktop-frontend",
-    "start:components": "lerna run start --scope @orbiter/components"
+    "start:components": "lerna run start --scope @orbiter/components",
+    "start:all": "yarn run start:components && yarn run start:frontend && yarn run start",
+
+    "build:frontend": "lerna run build --scope @orbiter/rocketchat-desktop-frontend",
+    "build:components": "lerna run build --scope @orbiter/components",
+    "build:all": "lerna run --parallel build"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
