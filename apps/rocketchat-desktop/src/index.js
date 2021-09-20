@@ -10,6 +10,12 @@ const createWindow = () => {
   const mainWindow = new BrowserWindow({
     width: 800,
     height: 600,
+    center: true,
+    webPreferences: {
+      webviewTag: true,
+      contextIsolation: true,
+      backgroundThrottling: false,
+    }
   });
 
   // and load the index.html of the app.
