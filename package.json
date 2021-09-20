@@ -3,15 +3,17 @@
   "private": true,
   "scripts": {
     "bootstrap": "yarn && lerna bootstrap",
-    "start": "lerna run start --scope @orbiter/rocketchat-desktop",
+    "start": "lerna run start --scope @orbiter/rocketchat-desktop-app",
     
-    "start:frontend": "lerna run start --scope @orbiter/rocketchat-desktop-frontend",
+    "start:frontend": "lerna run start --scope @orbiter/rocketchat-desktop-frontend --stream",
     "start:components": "lerna run start --scope @orbiter/components",
     "start:all": "yarn run start:components && yarn run start:frontend && yarn run start",
 
     "build:frontend": "lerna run build --scope @orbiter/rocketchat-desktop-frontend",
     "build:components": "lerna run build --scope @orbiter/components",
-    "build:all": "lerna run --parallel build"
+    "build:all": "lerna run --parallel build",
+
+    "clear": "npx rimraf ./**/node_modules"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
