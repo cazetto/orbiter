@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "@orbiter/nx-electron-forge": "^0.0.1"
+  }
+}
